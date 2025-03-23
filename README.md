@@ -37,12 +37,42 @@ ssh-keygen -t rsa -f ssh/id_rsa
 aws ec2 import-key-pair \
   --key-name "packer-keypair" \
   --public-key-material fileb://ssh/id_rsa.pub
+```
+![screenshot](screenshots/keypair.png)
+![screenshot](screenshots/push_keypair.png)
 
-
+## ✅ Parker
+```bash
+packer init .
 packer build docker-ami.pkr.hcl
+```
+![screenshot](screenshots/parker1.png)
+![screenshot](screenshots/parker2.png)
+![screenshot](screenshots/parker3.png)
+![screenshot](screenshots/parker4.png)
+![screenshot](screenshots/parker5.png)
+![screenshot](screenshots/parker6.png)
 
+
+## ✅ Terraform
+Replace "172.92.13.164/32" with your actual public IP in CIDR format in "variables.tf":
+```bash
+variable "my_ip" {
+default = "172.92.13.164/32" # Replace with your own IP
+}
+```
+Update the AMI ID with your AMI ID generated in Parker step:
+```bash
+variable "custom_ami_id" {
+default = "ami-03bb0432716e2009f" # Replace with your own AMI ID
+}
+```
+Deploy
+```bash
 terraform init
 terraform plan
 terraform apply
-
 ```
+![screenshot](screenshots/terraform1.png)
+![screenshot](screenshots/terraform2.png)
+![screenshot](screenshots/terraform3.png)
