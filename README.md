@@ -76,3 +76,30 @@ terraform apply
 ![screenshot](screenshots/terraform1.png)
 ![screenshot](screenshots/terraform2.png)
 ![screenshot](screenshots/terraform3.png)
+
+## ✅ Results Show
+AMI generated:
+![screenshot](screenshots/AMI.png)
+
+EC2 instance: 1 Bastion and 6 private EC2 instance
+![screenshot](screenshots/EC2.png)
+
+Bastion details:
+![screenshot](screenshots/Bastion.png)
+![screenshot](screenshots/Bastion_details.png)
+![screenshot](screenshots/Bastion_decurity.png)
+
+EC2 private instance details:
+![screenshot](screenshots/PrivateEC2.png)
+![screenshot](screenshots/PrivateEC2_details.png)
+![screenshot](screenshots/PrivateEC2_decurity.png)
+
+VPC:
+![screenshot](screenshots/VPC.png)
+
+Subnets:
+![screenshot](screenshots/Subnets.png)
+
+Natgateway:
+![screenshot](screenshots/Natgateway.png)
+![screenshot](screenshots/Natgateway2.png)
